@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body class="p-2 bg-slate-200">
+    <input
+      id="start"
+      type="number"
+      placeholder="Start"
+      class="rounded-md border border-gray-500"
+    />
+
+    <input
+      id="end"
+      placeholder="End"
+      type="number"
+      class="rounded-md border border-gray-500"
+    />
+    <!-- // hello world -->
+
+    <input
+      id="from"
+      placeholder="From"
+      type="number"
+      class="rounded-md border border-gray-500"
+    />
+
+    <input
+      id="upto"
+      placeholder="Upto"
+      type="number"
+      class="rounded-md border border-gray-500"
+    />
+
+    <button
+      onclick="show()"
+      class="bg-red-600 p-2 rounded-md text-white hover:bg-red-900"
+    >
+      Show
+    </button>
+
+    <div class="flex flex-wrap gap-1" id="div1"></div>
+
+    <script type="module" src="/main.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
