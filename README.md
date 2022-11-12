@@ -4,7 +4,8 @@
 
 - 💡 Instant Server Start
 - ⚡️ Lightning Fast HMR
-- 🛠️ Rich Features
+- 🛠️ Rich Feature
+  ']s
 - 📦 Optimized Build
 - 🔩 Universal Plugin Interface
 - 🔑 Fully Typed APIs

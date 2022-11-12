@@ -3,21 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Table App</title>
   </head>
   <body class="p-2 bg-slate-200">
     <input
       id="start"
       type="number"
       placeholder="Start"
-      class="rounded-md border border-gray-500"
+      class="border border-gray-500 rounded-md"
     />
 
     <input
       id="end"
       placeholder="End"
       type="number"
-      class="rounded-md border border-gray-500"
+      class="border border-gray-500 rounded-md"
     />
     <!-- // hello world -->
 
@@ -25,19 +25,19 @@
       id="from"
       placeholder="From"
       type="number"
-      class="rounded-md border border-gray-500"
+      class="border border-gray-500 rounded-md"
     />
 
     <input
       id="upto"
       placeholder="Upto"
       type="number"
-      class="rounded-md border border-gray-500"
+      class="border border-gray-500 rounded-md"
     />
 
     <button
       onclick="show()"
-      class="bg-red-600 p-2 rounded-md text-white hover:bg-red-900"
+      class="p-2 text-white bg-red-600 rounded-md hover:bg-red-900"
     >
       Show
     </button>
@@ -45,6 +45,30 @@
     <div class="flex flex-wrap gap-1" id="div1"></div>
 
     <script type="module" src="/main.js"></script>
-    <script src="./app.js"></script>
+    <script>
+      function show() {
+        const start = +document.getElementById("start").value;
+        const end = +document.getElementById("end").value;
+        const from = +document.getElementById("from").value;
+        const upto = +document.getElementById("upto").value;
+        const div = document.getElementById("div1");
+        let myHTML = "";
+
+        for (let num = start; num <= end; num++) {
+          const heading = `<div><h3 class="p-2 text-xl text-red-500 bg-yellow-300">${num} ka table start</h3>`;
+          myHTML += heading;
+          for (let i = from; i <= upto; i++) {
+            const row = `<p1>${num} x ${i} = ${num * i}</p1>`;
+            myHTML += `<h3 class="flex flex-col text-green-600">${row}</h3>`;
+          }
+          const footer = `<h3 class="p-2 text-xl text-gray-500 bg-pink-300">${num} ka table khatam</h3></div>`;
+
+          myHTML += footer;
+        }
+
+        div.innerHTML = myHTML;
+        e.stopImmediatePropagation();
+      }
+    </script>
   </body>
 </html>
